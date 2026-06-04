@@ -13,6 +13,9 @@ next-env.d.ts
 # DNS migration scratchpad (contains M365 verification tokens, do not commit)
 DNS.md
 
+# Migration ops scratch (Cloudflare token, scrape scripts, intermediate state)
+.ops/
+
 # OS
 .DS_Store
 Thumbs.db
@@ -25,3 +28,4 @@ Thumbs.db
 # editor
 .vscode/
 .idea/
+.vercel
