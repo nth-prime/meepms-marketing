@@ -10,6 +10,9 @@ next-env.d.ts
 # env
 .env*.local
 
+# DNS migration scratchpad (contains M365 verification tokens, do not commit)
+DNS.md
+
 # OS
 .DS_Store
 Thumbs.db
