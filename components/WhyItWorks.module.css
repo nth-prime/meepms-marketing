@@ -1,0 +1,151 @@
+.section {
+  background: var(--color-white);
+  padding: var(--space-12) 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.head {
+  max-width: 760px;
+  margin-bottom: var(--space-8);
+}
+
+.eyebrow {
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-orange-deep);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.heading {
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: var(--text-h2-desktop);
+  }
+}
+
+.compare {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .headerRow,
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.headLeft,
+.headRight {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--text-h3);
+  font-weight: 600;
+}
+
+.headLeft {
+  color: var(--color-slate-deep);
+}
+
+.headRight {
+  color: var(--color-ink);
+  background: var(--color-orange-tint);
+  border-top: 1px solid var(--color-line);
+}
+
+@media (min-width: 768px) {
+  .headRight {
+    border-top: 0;
+    border-left: 1px solid var(--color-line);
+  }
+}
+
+.cellLeft,
+.cellRight {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--text-body-s);
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cellLeft {
+  color: var(--color-slate-copy);
+  border-bottom: 1px solid var(--color-line);
+}
+
+@media (min-width: 768px) {
+  .cellLeft {
+    border-bottom: 0;
+  }
+}
+
+.cellRight {
+  color: var(--color-slate-deep);
+  background: var(--color-orange-tint);
+  border-top: 0;
+}
+
+@media (min-width: 768px) {
+  .cellRight {
+    border-left: 1px solid var(--color-line);
+  }
+}
+
+.tag {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-slate-deep);
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .tag {
+    display: none;
+  }
+}
+
+.cellText {
+  font-size: var(--text-body-s);
+}

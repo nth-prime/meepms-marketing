@@ -1,0 +1,94 @@
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  color: var(--color-slate-copy);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  max-width: 64ch;
+}
+
+.prose h2 {
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .prose h2 {
+    font-size: var(--text-h2-desktop);
+  }
+}
+
+.prose h3 {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .prose h3 {
+    font-size: var(--text-h3-desktop);
+  }
+}
+
+.prose ul,
+.prose ol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: 0;
+}
+
+.prose ul li,
+.prose ol li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--color-slate-deep);
+}
+
+.prose ul li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-orange);
+}
+
+.prose ol {
+  counter-reset: prose-ol;
+}
+
+.prose ol li {
+  counter-increment: prose-ol;
+}
+
+.prose ol li::before {
+  content: counter(prose-ol) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: var(--color-orange-deep);
+}
+
+.prose strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.prose a {
+  color: var(--color-orange-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: var(--color-ink);
+}

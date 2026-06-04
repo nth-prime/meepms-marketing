@@ -1,0 +1,72 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 4fr 7fr;
+    gap: var(--space-10);
+    align-items: start;
+  }
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.asideHeading {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+@media (min-width: 768px) {
+  .asideHeading {
+    font-size: var(--text-h3-desktop);
+  }
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.facts dt {
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-slate-deep);
+}
+
+.facts dd {
+  font-size: var(--text-body);
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+
+.facts a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-orange);
+}
+
+.facts a:hover {
+  color: var(--color-orange-deep);
+}
+
+.formWrap {
+  display: block;
+}

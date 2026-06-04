@@ -1,0 +1,56 @@
+{
+  "workflow": "commercial-website-workflow",
+  "version": "v1",
+  "source_factory": "agent-factory",
+  "source_path": "factory_floor/commercial-website-workflow",
+  "factory_location": "C:\\Users\\njgsk\\OneDrive\\repositories\\factories\\agent-factory",
+  "local_overrides": [
+    {
+      "name": "project-inputs",
+      "description": "Read-only input paths. After v1 shipped, source materials were moved to a sibling archive directory ../marketing-archive/source-materials/ for public-repo polish. The lease re-pins to that location. Materials remain authoritative; the project root stays a clean Next.js implementation.",
+      "paths": {
+        "source_materials_dirs": [
+          "../marketing-archive/source-materials/flyers/",
+          "../marketing-archive/source-materials/orders/"
+        ],
+        "brand_assets_dir": "../marketing-archive/source-materials/site/examples/images/meep-image-kit/",
+        "current_site_dir": "../marketing-archive/source-materials/site/examples/",
+        "current_site_html": "../marketing-archive/source-materials/site/examples/original_meep.html",
+        "redesign_plan_file": "../marketing-archive/source-materials/MEEP_SITE_REDESIGN_PLAN.md",
+        "animation_inspiration_dir": "../marketing-archive/source-materials/site/examples/animations/",
+        "design_inspiration_dir": "../marketing-archive/source-materials/site/examples/inspirations/",
+        "private_data_warning": "../marketing-archive/source-materials/orders/order1.tex contains private customer name (Star Transport / Big Star Trucking) and pricing — never publish."
+      },
+      "factory_recommendations": "none — archive split is project-specific public-repo hygiene, not a factory bug"
+    },
+    {
+      "name": "project-working-artifacts",
+      "description": "Project-local source-of-truth handoff documents written by workflow stage owners. Lives in the repo as audit trail and inter-stage handoff.",
+      "root": "./website_docs/",
+      "files": [
+        { "path": "./website_docs/SITE_BRIEF.md", "owner_stage": "1 Site Intake" },
+        { "path": "./website_docs/ASSET_REGISTER.md", "owner_stage": "1 Site Intake" },
+        { "path": "./website_docs/OFFER_ARCHITECTURE.md", "owner_stage": "2 Offer Architecture" },
+        { "path": "./website_docs/DESIGN_SYSTEM.md", "owner_stage": "3 Visual System" },
+        { "path": "./website_docs/PAGE_BLUEPRINT.md", "owner_stage": "4 Page Blueprint" },
+        { "path": "./website_docs/IMPLEMENTATION_SUMMARY.md", "owner_stage": "5 Site Build" },
+        { "path": "./website_docs/EXPERIENCE_REVIEW.md", "owner_stage": "6 Experience Red Team" }
+      ],
+      "factory_recommendations": "none — natural project layout"
+    },
+    {
+      "name": "project-outputs",
+      "description": "Project-relative delivered Next.js artifact paths. Delivered output must not be written outside this set.",
+      "paths": {
+        "app_router_dir": "./app/",
+        "pages_router_dir": "./pages/",
+        "components_dir": "./components/",
+        "public_dir": "./public/",
+        "styles_dir": "./styles/"
+      },
+      "router_preference": "App Router (./app/) preferred; ./pages/ only used when the project explicitly chooses Pages Router instead",
+      "factory_recommendations": "none — natural project layout"
+    }
+  ],
+  "notes": "This project is pinned to a leased factory workflow. Update deliberately. Bootstrap created via /lease-commercial-website-workflow on 2026-05-01. v1 shipped 2026-05-01; source materials and past QA captures relocated to ../marketing-archive/ for public-repo polish on the same day. Lease + audit trail (website_docs/) remain in project root."
+}

@@ -1,0 +1,117 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+    align-items: start;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 64ch;
+}
+
+.heading {
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: var(--text-h2-desktop);
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-2);
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(255, 127, 87, 0.18);
+}
+
+.stepHeading {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+}
+
+.stepBody {
+  font-size: var(--text-body-s);
+  color: var(--color-slate-copy);
+  line-height: 1.55;
+}
+
+.expect {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.expect li {
+  position: relative;
+  padding-left: 22px;
+  font-size: var(--text-body);
+  color: var(--color-slate-deep);
+  line-height: 1.5;
+}
+
+.expect li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-orange);
+}
+
+.formWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.fineprint {
+  font-size: var(--text-body-s);
+  color: var(--color-slate-copy);
+}
+
+.fineprint a {
+  color: var(--color-orange-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -1,0 +1,126 @@
+.section {
+  background: var(--color-paper);
+  padding: var(--space-12) 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.head {
+  max-width: 760px;
+  margin-bottom: var(--space-8);
+}
+
+.eyebrow {
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-orange-deep);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.heading {
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: var(--text-h2-desktop);
+  }
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+@media (min-width: 900px) {
+  .step {
+    flex-direction: column;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(255, 127, 87, 0.18);
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.stepHeading {
+  font-size: var(--text-h3);
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.stepText {
+  font-size: var(--text-body-s);
+  color: var(--color-slate-copy);
+  line-height: 1.5;
+}
+
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-10);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-orange);
+  color: var(--color-white);
+  padding: 14px 24px;
+  border-radius: var(--radius-button);
+  font-size: var(--text-body);
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta:hover {
+  background: var(--color-orange-deep);
+  transform: translateY(-1px);
+}
